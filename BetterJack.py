@@ -112,8 +112,6 @@ class CARD:
             try:
                 return int(self.price)
             except:
-                if self.price == "Gerg":
-                    return 1.501
                 return 10
 
 class DECK:
@@ -125,7 +123,7 @@ class DECK:
         if (deck == [] and suits != None):
             for i in range(0,numDecks):
                 for suit in suits:
-                    for price in ["Ace","1.5","Gerg","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]:
+                    for price in ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]:
                         self.deck.append(CARD(suit,price))
 
     def shuffle(self):
