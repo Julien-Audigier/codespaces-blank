@@ -387,7 +387,7 @@ while (True): #Game Loop
     for user in users:
         gameDeck = user.user_play(gameDeck, users, ai, dealer)
     for AI in ai:
-        gameDeck += AI.ai_play(gameDeck,users, ai, dealer)
+        gameDeck = AI.ai_play(gameDeck,users, ai, dealer)
         time.sleep(timeSpeed * 1)
         print("")
     dealer.ai_play(gameDeck, users, ai, dealer,"The", Fore.MAGENTA)
